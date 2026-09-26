@@ -1,0 +1,9 @@
+.retina-figure {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.retina-figure__heat circle {
+  transition: opacity 0.4s var(--ease);
+}

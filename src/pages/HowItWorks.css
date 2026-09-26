@@ -1,0 +1,96 @@
+.hiw__title {
+  font-size: var(--fs-2xl);
+  max-width: 26ch;
+  margin-top: var(--space-3);
+}
+
+.hiw__lede {
+  color: var(--ink-soft);
+  font-size: var(--fs-md);
+  max-width: 60ch;
+  margin-top: var(--space-4);
+}
+
+.hiw__diagram {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: var(--space-2);
+  margin-top: var(--space-7);
+}
+
+.hiw__node {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-3);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--surface-card);
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.15s var(--ease), background 0.15s var(--ease);
+}
+
+.hiw__node:hover { border-color: var(--border-strong); }
+
+.hiw__node.is-active {
+  border-color: var(--primary);
+  background: var(--primary-soft);
+}
+
+.hiw__node-index {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--primary);
+}
+
+.hiw__node-label {
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  color: var(--ink);
+  line-height: var(--lh-snug);
+}
+
+.hiw__detail {
+  margin-top: var(--space-6);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  background: var(--surface-sunken);
+}
+
+.hiw__detail h2 { font-size: var(--fs-xl); }
+
+.hiw__detail-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+  margin-top: var(--space-5);
+}
+
+.hiw__detail-grid dt {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--primary);
+  margin-bottom: var(--space-2);
+}
+
+.hiw__detail-grid dd {
+  margin: 0;
+  font-size: var(--fs-sm);
+  color: var(--ink-soft);
+  line-height: var(--lh-normal);
+}
+
+.hiw__cta { margin-top: var(--space-7); }
+
+@media (max-width: 980px) {
+  .hiw__diagram { grid-template-columns: repeat(3, 1fr); }
+  .hiw__detail-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .hiw__diagram { grid-template-columns: repeat(2, 1fr); }
+  .hiw__detail-grid { grid-template-columns: 1fr; }
+}
